@@ -10,6 +10,11 @@ This plugin blocks the possibility of leaving the server while the player is fig
 
 This plugin was coded for the paper 1.20+ engine but should also work with others
 
+#### Commands and Permissions
+
+AnitLogout Config Reload Command (Permissions to use: antilogout.admin)
+- /alreload
+
 #### Functions
 
 - **Escape Protection:** The plugin reacts to attempts to leave the game during combat.
