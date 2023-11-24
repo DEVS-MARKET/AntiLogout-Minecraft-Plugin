@@ -1,0 +1,11 @@
+name: Antilogout
+version: '${project.version}'
+main: uk.whitedev.antilogout.Antilogout
+api-version: 1.20
+authors: [ 0WhiteDev ]
+description: AntiLogout Plugin
+website: https://devs.market
+commands:
+  alreload:
+    description: Command to reload plugin config
+    permission: antilogout.admin

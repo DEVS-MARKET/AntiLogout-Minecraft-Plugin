@@ -1,0 +1,51 @@
+############################
+#        DEVS.MARKET       #
+#  AntiLogout Free Plugin  #
+############################
+
+# Main Settings
+# Enter all values in seconds
+#
+# Fight duration
+time: 15
+# The time during which the bassbar with information
+# about the end of the fight is to be displayed
+fight-finished-info-time: 5
+
+# BossBar Settings
+# Placeholders: %time% - time left until the end of the fight (only for: fight-info-bossbar)
+# If you want to get gradient text in the bossbar use https://www.birdflop.com/resources/rgb/
+# Just copy your text and paste it between the quotation marks
+# Example: fight-info-bossbar: "&#fb0000t&#fb1500e&#fc2a00s&#fc3f00t &#fd5400m&#fd6a00e&#fd7f00s&#fe9400s&#fea900a&#ffbe00g&#ffd300e"
+#
+# The text that the bossbar will show after start fighting
+fight-info-bossbar: "&7You are fighting for another &c&l%time% &7seconds"
+# The text that the bossbar will show after the fight is over
+fight-finished-bossbar: "&7Your fight is &a&lover&7, you can log out now!"
+
+# Messages Settings
+# Placeholders: %player% - name of the player who left the game during the fight (only for: player-quit)
+# To get gradient/colored text use the formatting provided by MiniMessages (It is not possible to use legacy format here)
+#
+# Documentation: https://docs.advntr.dev/minimessage/format.html
+# The reason for using multiple formatting is the lack of MiniMessages support for bossbars/items/gui,
+# the basic config contains examples of using MiniMessages, follow this if you don't understand the documentation
+#
+# By adding subsequent lines, the chat will display all lines added to a given value
+# Example:
+# fight-info-player:
+#   - "Line 1"
+#   - "Line 2"
+# You will see these 2 lines ("Line 1" and "Line 2" will appear on chat)
+#
+# The text that the player will see after start fighting
+fight-info-player:
+  - "<#636363>[<gradient:#FB0000:#FD3F3F><b>ANTILOGOUT</b></gradient><#636363>] <#9B9B9B>You are now in the middle of a fight, if you log out you will <#FB0000>die<#9B9B9B>!"
+# The text that the player will see after the fight is over
+fight-finished-player:
+  - "<#636363>[<gradient:#FB0000:#FD3F3F><b>ANTILOGOUT</b></gradient><#636363>] <#9B9B9B>Your fight is over! You can now log out safely"
+# The text that everyone will see after the player quit from server during in fight
+player-quit:
+  - "<#636363>[<gradient:#FB0000:#FD3F3F><b>ANTILOGOUT</b></gradient><#636363>] <#9B9B9B>Player <#FB0000>%player% <#9B9B9B>logged out during the fight!"
+# The text that admin will see after plugin reload (This value does not have multi-line support)
+reload-message: "<#636363>[<gradient:#FB0000:#FD3F3F><b>ANTILOGOUT</b></gradient><#636363>] <#9B9B9B>Plugin got reloaded <#45FF00>successful<#9B9B9B>!"
