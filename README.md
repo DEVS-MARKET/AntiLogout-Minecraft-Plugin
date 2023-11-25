@@ -21,7 +21,7 @@ AnitLogout Config Reload Command (Permissions to use: antilogout.admin)
 - **Customization:** The plugin's configuration allows you to freely configure the combat time, appearance and display time of various information
 
 #### Project Suppot
-If you need help with the client, text to me:
+If you need help, text to me:
 - Discord: 0whtiedev / 0WhiteDev#0001
 - Discord Server: https://discord.gg/KhExwvqZb5
 - Email: 0whitedev@gmail.com
