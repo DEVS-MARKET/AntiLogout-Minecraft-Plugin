@@ -22,7 +22,7 @@ AnitLogout Config Reload Command (Permissions to use: antilogout.admin)
 
 #### Project Suppot
 If you need help, text to me:
-- Discord: 0whtiedev / 0WhiteDev#0001
+- Discord: 0whitedev / 0WhiteDev#0001
 - Discord Server: https://discord.gg/KhExwvqZb5
 - Email: 0whitedev@gmail.com
 ## Authors
