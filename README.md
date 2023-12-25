@@ -18,6 +18,7 @@ AnitLogout Config Reload Command (Permissions to use: antilogout.admin)
 #### Functions
 
 - **Escape Protection:** The plugin reacts to attempts to leave the game during combat.
+- **Commands Protection:** The plugin disables the ability to use commands for the player during fight, the player can use commands from the whitelist.
 - **Customization:** The plugin's configuration allows you to freely configure the combat time, appearance and display time of various information
 
 #### Project Suppot
