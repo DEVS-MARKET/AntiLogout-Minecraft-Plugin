@@ -2,7 +2,10 @@ package uk.whitedev.antilogout.listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.AbstractArrow;
+import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.Trident;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -30,8 +33,12 @@ public class PlayerListener {
         Bukkit.getPluginManager().registerEvents(new Listener() {
             @EventHandler
             public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
-                if (event.getDamager() instanceof Player && event.getEntity() instanceof Player) {
-                    Player attacker = (Player) event.getDamager();
+                Object shooter = null;
+                if(event.getDamager() instanceof Arrow || event.getDamager() instanceof Trident){
+                    shooter  = ((event.getDamager() instanceof Arrow ? ((Arrow) event.getDamager()) : ((Trident) event.getDamager())).getShooter());
+                }
+                if (event.getDamager() instanceof Player && event.getEntity() instanceof Player || shooter != null && event.getEntity() instanceof Player) {
+                    Player attacker = (Player) (shooter == null ? event.getDamager() : shooter);
                     Player target = (Player) event.getEntity();
                     int time = plugin.getConfig().getInt("time") + 1;
                     List<String> msgList = config.getStringList("fight-info-player");
