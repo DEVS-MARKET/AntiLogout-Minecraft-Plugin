@@ -47,5 +47,11 @@ fight-finished-player:
 # The text that everyone will see after the player quit from server during in fight
 player-quit:
   - "<#636363>[<gradient:#FB0000:#FD3F3F><b>ANTILOGOUT</b></gradient><#636363>] <#9B9B9B>Player <#FB0000>%player% <#9B9B9B>logged out during the fight!"
+# List of commands allowed during fight (the rest of the commands available on the server will be blocked)
+whitelist-commands:
+  - "msg"
+  - "r"
+# A message for the player when he wants to use a command that is not allowed during fight
+fight-command-access-denied: "<#636363>[<gradient:#FB0000:#FD3F3F><b>ANTILOGOUT</b></gradient><#636363>] <#9B9B9B>You cant use this command during fight!"
 # The text that admin will see after plugin reload (This value does not have multi-line support)
 reload-message: "<#636363>[<gradient:#FB0000:#FD3F3F><b>ANTILOGOUT</b></gradient><#636363>] <#9B9B9B>Plugin got reloaded <#45FF00>successful<#9B9B9B>!"

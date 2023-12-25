@@ -14,7 +14,7 @@ import uk.whitedev.antilogout.tasks.MessageTask;
 
 import java.util.List;
 
-public class PlayerListener implements Listener {
+public class PlayerListener {
 
     private final Plugin plugin = Antilogout.getPlugin(Antilogout.class);
     private final PlayerData playerData = PlayerData.getInstance();
@@ -33,7 +33,7 @@ public class PlayerListener implements Listener {
                 if (event.getDamager() instanceof Player && event.getEntity() instanceof Player) {
                     Player attacker = (Player) event.getDamager();
                     Player target = (Player) event.getEntity();
-                    int time = plugin.getConfig().getInt("time");
+                    int time = plugin.getConfig().getInt("time") + 1;
                     List<String> msgList = config.getStringList("fight-info-player");
                     for(String line : msgList) {
                         if(!playerData.getPlayersMap().containsKey(attacker))

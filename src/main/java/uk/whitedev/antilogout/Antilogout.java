@@ -4,11 +4,11 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 import uk.whitedev.antilogout.commands.Reload;
+import uk.whitedev.antilogout.listeners.CommandsListener;
 import uk.whitedev.antilogout.listeners.PlayerListener;
 import uk.whitedev.antilogout.tasks.TimeTask;
 
 public final class Antilogout extends JavaPlugin {
-
     @Override
     public void onEnable() {
         saveDefaultConfig();
@@ -25,6 +25,8 @@ public final class Antilogout extends JavaPlugin {
         return false;
     }
 
+
+
     @Override
     public void onDisable() {
         getLogger().info("Anti-Logout Plugin - by 0WhiteDev [devs.market] has been disabled");
@@ -32,6 +34,7 @@ public final class Antilogout extends JavaPlugin {
 
     private void initializeModules(){
         new PlayerListener().registerListeners();
+        new CommandsListener().registerListeners();
         new TimeTask().runTaskTimer(this, 0, 20L);
         getCommand("alreload").setExecutor(this);
     }
